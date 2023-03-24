@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 import { BsArrowRightSquare } from 'react-icons/bs'
 import Link from 'next/link'
 
-const Hero = ({dropMenu}) => {
+const Hero = () => {
   return (
-    <div className='flex flex-col space-y-10 items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img'>
+    <div className='h-screen bg-fixed bg-center bg-cover custom-img'>
+    <div className='flex flex-col space-y-10 items-center justify-center h-screen'>
         <motion.h1 
         initial='hidden' animate='visible' variants={{
             hidden: {
@@ -47,20 +48,23 @@ const Hero = ({dropMenu}) => {
                     duration: 1.0
                 }
             }
-        }} 
-        className='py-2 px-4 bg-[rgba(0,0,0,0.09)] backdrop-blur-[10px] shadow-lg shadow-slate-600 rounded-md text-slate-600 tracking-widest hover:shadow-sky-200 hover:text-sky-200 hover:border-transparent transition duration-200'>
+        }} whileHover={{ scale: 1.1, transition: { duration: 0.1 }}} whileTap={{ scale: 0.9 }}
+        className='py-2 px-4 bg-slate-600 shadow-lg shadow-slate-600 rounded-md text-slate-200 tracking-widest hover:bg-[rgba(0,0,0,0.09)] hover:backdrop-blur-[10px] hover:shadow-sky-200 hover:text-sky-200 hover:border-transparent transition duration-75'>
             <a className='font-michroma' href='/AaronResume.pdf' download>RESUME</a>
         </motion.button>
+
+        </div>
 
         
 
         <div className='absolute bottom-10 right-6 py-2 px-2'>
             <Link href='/about' className='flex items-center md:space-x-2'>
-               <p className='font-michroma text-slate-800 hover:text-sky-200 text-xl md:text-2xl transition duration-300 hidden sm:inline'>Next</p>
-               <BsArrowRightSquare size={45} fill='#bae6fd'/>
+               <p className='font-michroma text-slate-600 hover:text-sky-200 text-xl md:text-2xl transition duration-300 hidden sm:inline'>Next</p>
+               <BsArrowRightSquare size={45} fill='#475569'/>
             </Link>
             
         </div>
+    
     </div>
   )
 }
