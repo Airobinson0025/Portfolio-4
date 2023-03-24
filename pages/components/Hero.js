@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FcNext} from 'react-icons/fc'
+import { BsArrowRightSquare } from 'react-icons/bs'
 import Link from 'next/link'
 
 const Hero = ({dropMenu}) => {
@@ -56,8 +56,8 @@ const Hero = ({dropMenu}) => {
 
         <div className='absolute bottom-10 right-6 py-2 px-2'>
             <Link href='/about' className='flex items-center md:space-x-2'>
-               <p className='font-michroma text-slate-800 hover:text-sky-200 text-md md:text-xl transition duration-300'>Next</p>
-               <FcNext size={20} color='white'/>
+               <p className='font-michroma text-slate-800 hover:text-sky-200 text-xl md:text-2xl transition duration-300 hidden sm:inline'>Next</p>
+               <BsArrowRightSquare size={45} fill='#bae6fd'/>
             </Link>
             
         </div>
