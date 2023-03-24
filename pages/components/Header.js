@@ -15,15 +15,39 @@ const Header = () => {
 
   return (
     <div className='flex justify-between items-center p-6 sm:p-6 w-full fixed'>
-        <div className=''>
+        <motion.div initial='hidden' animate='visible' variants={{
+            hidden: {
+                scale: .9,
+                opacity: 0
+            },
+            visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                    duration: 1.0
+                }
+            }
+        }}  className=''>
             <Link href='/'>
                <h1 className='font-michroma text-xl sm:text-2xl text-slate-600  bg-[rgba(0,0,0,0.09)] backdrop-blur-[10px] py-2 px-2 rounded-xl shadow-lg shadow-slate-600'>AR</h1>
             </Link>
-        </div>
+        </motion.div>
 
         
 
-            <div className='hidden sm:inline sm:text-[1.1rem] md:text-[1.3rem] pl-6'>
+            <motion.div initial='hidden' animate='visible' variants={{
+            hidden: {
+                scale: .9,
+                opacity: 0
+            },
+            visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                    duration: 1.0
+                }
+            }
+        }}  className='hidden sm:inline sm:text-[1.1rem] md:text-[1.3rem] pl-6'>
                 <ul className='flex font-michroma text-md text-slate-600 space-x-12'>
                     <li className='tracking-wide link-underline link-underline-black'>
                         <Link href='/about'>About</Link>
@@ -38,7 +62,7 @@ const Header = () => {
                         <Link href='/contact'>Contact</Link>
                     </li>
                 </ul>
-            </div>
+            </motion.div>
 
             <div className='sm:hidden'>
                 <button onClick={handleClick} className='py-2 px-2  rounded-xl'>
