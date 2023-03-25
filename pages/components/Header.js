@@ -70,10 +70,10 @@ const Header = () => {
                 </button>
             </div>
 
-            <div className={dropMenu ? 'sm:hidden m-0 absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-slate-200 w-full h-screen bg-slate-400 ease-in-out duration-200 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-800px] right-0 flex justify-center items-center text-center text-stone-800 w-full h-screen bg-white ease-out duration-300'}>
+            <div className={dropMenu ? 'sm:hidden m-0 absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-slate-600 w-full h-screen bg-[rgba(0,0,0,0.09)] backdrop-blur-[40px] ease-in-out duration-200 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-800px] right-0 flex justify-center items-center text-center text-stone-800 w-full h-screen bg-white ease-out duration-300'}>
 
             <button onClick={handleClick} className='py-2 px-2 rounded-xl absolute top-[24px] right-[24px]'>
-            {dropMenu ? <AiOutlineClose size={33} color='#e2e8f0'/> : null }
+            {dropMenu ? <AiOutlineClose size={33} color='#475569'/> : null }
             </button>
 
                 <ul className='font-michroma text-3xl space-y-14'>
